@@ -16,18 +16,21 @@ export class ContactComponent {
     message: '',
   });
   constructor(private fb:FormBuilder){ }
-  
+
+  // This function is called when the form is submitted to send the email
+  // It uses the EmailJS service to send the email with the form data
+  // Make sure to replace 'your-service-id', 'your-template-id', and 'your-public-key' with your actual EmailJS credentials
   async send() {
-    let response = await emailjs.send('service_vmx3aos','template_xwcf0ls',{
+    let response = await emailjs.send('your-service-id','your-template-id',{
       from_name: this.form.value.from_name,
       to_name: this.form.value.to_name,
       from_email: this.form.value.from_email,
       subject: this.form.value.subject,
       message: this.form.value.message,
-      }, '3o0zBmMMWvWuTWl0c');
+      }, 'your-public-key');
 
     alert('Your message has been sent! I will try to get back to you asap.');
     this.form.reset();
   }
-  
+
 }

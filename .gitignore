@@ -3,4 +3,5 @@
 /.angular/
 *.log
 /node_modules/
+.angular
 
