@@ -3,7 +3,7 @@
 \*-----------------------------------*/
 
 /**
- * 
+ *
  */
 
 /**
@@ -37,13 +37,6 @@
 @import url("components/slider.css");
 @import url("components/card.css");
 
-/*-----------------------------------*\
-  #HEADER
-\*-----------------------------------*/
-
-
-.header { background-color: var(--white); box-shadow: var(--shadow); }
-
 
 /*-----------------------------------*\
   #HERO
@@ -52,9 +45,8 @@
 .hero {
   position: relative;
   background-color: var(--maximum-yellow-red_a10);
-  padding-block-start: calc(var(--section-padding) + 60px);
+  padding-block-start: var(--section-padding);
   text-align: center;
-  overflow: hidden;
 }
 
 .hero::after {
@@ -134,7 +126,6 @@
   gap: 15px 25px;
 }
 
-
 .skill { padding-block-end: 0; }
 
 .skill .container,
@@ -173,9 +164,6 @@
   color: var(--white);
   font-weight: var(--fw-500);
 }
-
-
-
 
 
 /*-----------------------------------*\
@@ -226,7 +214,6 @@
 }
 
 .testi .slider::-webkit-scrollbar-button { width: calc(25% - 20px); }
-
 
 @media (min-width: 575px) {
 
@@ -332,3 +319,4 @@
   .about-list { gap: 40px; }
 
 }
+

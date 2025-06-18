@@ -3,7 +3,7 @@
 \*-----------------------------------*/
 
 /**
- * 
+ *
  */
 
 /**
@@ -18,10 +18,6 @@
  * Footer.........................Footer style
  * Media queries..................Responsive for all devices
  */
-
-
-
-
 
 /*-----------------------------------*\
   #CUSTOM PROPERTY
@@ -65,7 +61,7 @@
   --fs-17: 1.7rem;
   --fs-14: 1.4rem;
   --fs-12: 1.2rem;
-  
+
   --fw-400: 400;
   --fw-500: 500;
   --fw-600: 600;
@@ -75,7 +71,6 @@
    */
 
   --section-padding: 60px;
-
   /**
    * shadow
    */
@@ -99,10 +94,6 @@
   --cubic-out: cubic-bezier(0.05, 0.83, 0.52, 0.97);
 
 }
-
-
-
-
 
 /*-----------------------------------*\
   #RESET
@@ -160,7 +151,6 @@ body {
   color: var(--davys-gray);
   font-size: 1.6rem;
   line-height: 1.5;
-  overflow: hidden;
   position: relative!important;
   overflow-y: scroll!important;
 }
@@ -176,9 +166,6 @@ body.loaded { overflow: visible; }
 ::-webkit-scrollbar-thumb { background-color: hsl(0, 0%, 80%); }
 
 ::-webkit-scrollbar-thumb:hover { background-color: hsl(0, 0%, 70%); }
-
-
-
 
 
 /*-----------------------------------*\
@@ -226,9 +213,6 @@ body.loaded { overflow: visible; }
 .body-lg { font-weight: var(--fw-500); }
 
 
-
-
-
 /*-----------------------------------*\
   #REUSED STYLE
 \*-----------------------------------*/
@@ -251,6 +235,7 @@ body.loaded { overflow: visible; }
   width: 100%;
   height: 100%;
   object-fit: cover;
+  border-radius: 20%;
 }
 
 .has-bg-image {
@@ -262,12 +247,7 @@ body.loaded { overflow: visible; }
 .img-holder {
   aspect-ratio: var(--width) / var(--height);
   background-color: var(--light-gray);
-  overflow: hidden;
 }
-
-
-
-
 
 /*-----------------------------------*\
   #PRELOADER
@@ -302,9 +282,6 @@ body.loaded { overflow: visible; }
 }
 
 
-
-
-
 /*-----------------------------------*\
   #HEADER
 \*-----------------------------------*/
@@ -312,13 +289,12 @@ body.loaded { overflow: visible; }
 .header .btn { display: none; }
 
 .header {
-  position: fixed;
+  position: sticky;
+  z-index: 9999;
   top: 0;
-  left: 0;
-  width: 100%;
   background-color: var(--white);
+  box-shadow: var(--shadow);
   padding-block: 16px;
-  z-index: 4;
   transition: var(--transition-1);
 }
 
@@ -461,7 +437,7 @@ body.loaded { overflow: visible; }
  */
 
 @media (min-width: 992px) {
-  
+
   /**
    * TYPOGRAPHY
    */
@@ -523,10 +499,6 @@ body.loaded { overflow: visible; }
 
 }
 
-
-
-
-
 /**
  * responsive for large than 1200px screen
  */
@@ -539,7 +511,7 @@ body.loaded { overflow: visible; }
 
   .headline-lg { --fs-45: 7rem; }
 
-  
+
 
   /**
    * REUSED STYLE

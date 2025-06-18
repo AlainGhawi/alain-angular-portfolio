@@ -7,7 +7,6 @@ import { IonicModule } from '@ionic/angular';
 import { HomeComponent } from './home/home.component';
 import { ContactComponent } from './contact/contact.component';
 import { ServiceComponent } from './service/service.component';
-import { PortfolioComponent } from './portfolio/portfolio.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { ReactiveFormsModule } from '@angular/forms';
@@ -24,7 +23,6 @@ export function HttpLoaderFactory(http: HttpClient) {
     HomeComponent,
     ContactComponent,
     ServiceComponent,
-    PortfolioComponent,
     HeaderComponent,
     FooterComponent,
   ],

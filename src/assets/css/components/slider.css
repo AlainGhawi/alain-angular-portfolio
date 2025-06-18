@@ -2,7 +2,6 @@
   display: flex;
   align-items: center;
   gap: 30px;
-  overflow-x: auto;
   scroll-snap-type: inline mandatory;
 }
 

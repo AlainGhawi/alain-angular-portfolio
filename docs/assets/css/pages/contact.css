@@ -2,7 +2,7 @@
 
 .contact {
   background-color: var(--jet);
-  padding-block-start: calc(var(--section-padding) + 60px);
+  padding-block-start: var(--section-padding);
 }
 
 .contact .container {
