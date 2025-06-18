@@ -379,6 +379,10 @@ body.loaded { overflow: visible; }
 
   .title-lg { --fs-27: 3.5rem; }
 
+  .container {
+    max-width: 100%;
+    padding-inline: .75rem;
+  }
 }
 
 

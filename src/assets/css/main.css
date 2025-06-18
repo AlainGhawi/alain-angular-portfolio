@@ -49,9 +49,9 @@
   text-align: center;
 }
 
-.hero::after {
+/* .hero::after {
   content: "";
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 10%;
   bottom: 70%;
@@ -60,7 +60,7 @@
   transform: rotate(-45deg);
   border-radius: var(--radius-50);
   z-index: -1;
-}
+} */
 
 .hero .container {
   display: grid;
@@ -248,12 +248,12 @@
 
   .hero-text { --fs-18: 2rem; }
 
-  .hero::after {
+  /* .hero::after {
     top: -20%;
     bottom: 50%;
     left: 48%;
     right: -15%;
-  }
+  } */
 
 
 
