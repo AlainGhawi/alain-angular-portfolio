@@ -153,6 +153,7 @@ body {
   line-height: 1.5;
   position: relative!important;
   overflow-y: scroll!important;
+  overflow-x: auto;
 }
 
 body.loaded { overflow: visible; }
