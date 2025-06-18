@@ -2,25 +2,6 @@
   #service.css
 \*-----------------------------------*/
 
-/**
- * 
- */
- 
-/**
- * TABLE OF CONTENT
- *
- * COMPONENTS
- * Card...........................Cards style
- * Btn............................Button style
- *
- * MAIN CONTENT
- * Service........................Service style
- * Media queries..................Responsive for all devices
- */
-
-
-
-
 
 /*-----------------------------------*\
   #COMPONENTS
@@ -37,7 +18,10 @@
   #SERVICES
 \*-----------------------------------*/
 
-.service { padding-block-start: calc(var(--section-padding) + 60px); }
+.service {
+  padding-block-start: var(--section-padding);
+  background-color: var(--maximum-yellow-red_a10);
+}
 
 .service-list {
   display: grid;

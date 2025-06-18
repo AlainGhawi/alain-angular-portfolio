@@ -3,9 +3,9 @@
 \*-----------------------------------*/
 
 /**
- * 
+ *
  */
- 
+
 /**
  * TABLE OF CONTENT
  *
@@ -34,7 +34,7 @@
 
 .portfolio {
   background-color: var(--maximum-yellow-red_a10);
-  padding-block-start: calc(var(--section-padding) + 60px);
+  padding-block-start: var(--section-padding) + 60px;
 }
 
 .portfolio-list,
