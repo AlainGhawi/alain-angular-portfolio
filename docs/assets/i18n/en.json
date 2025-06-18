@@ -1,0 +1,47 @@
+{
+    "HERO_CONTENT": {
+        "SUBTITLE": "My name is Alain Ghawi",
+        "HEADLINE": "And i'm a sofware engineer & digital content creator",
+        "LOCATION": "Based in Montreal, Canada."
+    },
+    "CONTACT": {
+        "LABEL": "Get in touch",
+        "TEXT": "I would love to hear from you if you have new opportunities!",
+        "NAME": "Your name",
+        "YOUR_EMAIL": "Your email",
+        "SUBJECT": "Subject",
+        "MESSAGE": "Your message",
+        "SEND_MESSAGE": "Send message",
+        "LOCATION": "Located now",
+        "EMAIL": "Email",
+        "PHONE": "Phone",
+        "CONTACT_NOW": "Contact Now"
+    },
+    "SERVICES": {
+        "TITLE": "My Services",
+        "SERVICE_1": "Development",
+        "SERVICE_1_DESCRIPTION": "Full-stack development using .NET, C#, Angular, and Blazor for scalable, maintainable, cloud-native solutions.",
+        "SERVICE_2": "Technical Writing",
+        "SERVICE_2_DESCRIPTION": "Clear and concise documentation using Confluence, covering codebases, systems architecture, and project guidelines.",
+        "SERVICE_3": "Database Design",
+        "SERVICE_3_DESCRIPTION": "Design and optimization of relational databases, primarily with MSSQL, ensuring high performance and data integrity.",
+        "SERVICE_4": "DevOps",
+        "SERVICE_4_DESCRIPTION": "Streamlining development workflows with Azure DevOps, CI/CD pipelines, containerization, and cloud infrastructure management.",
+        "SERVICE_5": "Consulting & Advising",
+        "SERVICE_5_DESCRIPTION": "Providing strategic insights on software architecture, cloud migration, and best practices for robust, maintainable systems.",
+        "SERVICE_6": "Training",
+        "SERVICE_6_DESCRIPTION": "Training teams on modern development practices, including Agile methodologies, cloud technologies, and .NET"
+    },
+    "ABOUT": {
+        "TITLE": "I'm a fullstack engineer with 7+ years of experience.",
+        "SECTION_1": "🚀 As a dynamic software engineer, I've taken a global journey from my Lebanese roots to working for companies in Lebanon, Bahrain, USA, Saudi Arabia, and Canada.",
+        "SECTION_2": "💻 My passion for technology knows no bounds, and my journey is marked by creating financial apps, streamlining supply chain management, crafting intuitive POS systems, and architecting seamless e-commerce platforms. I've also ventured into the intricate world of insurance sales portals, ensuring every project complies with the highest standards.",
+        "SECTION_3": "🌟 My mission is to turn complex challenges into elegant solutions that go above and beyond expectations. I'm dedicated to delivering excellence in every project, pushing the boundaries of what's possible in software engineering.",
+        "SECTION_4": "🌎 With a global perspective and a wealth of experience, I'm eager to embark on new opportunities to continue making a meaningful impact. Let's join forces and create something extraordinary! 🔥💼💡",
+        "PROJECTS": "Projects Completed",
+        "CLIENTS": "Happy Clients",
+        "SKILLS": "My Skills",
+        "INTEREST": "Interested in working with me?",
+        "TESTIMONIALS":"Testimonials"
+    }
+}
