@@ -220,7 +220,12 @@ body.loaded { overflow: visible; }
 
 .container { padding-inline: 16px; }
 
-.section { padding-block: var(--section-padding); }
+.section {
+  padding-block: var(--section-padding);
+  display: flex;
+  flex-direction: column;
+  flex: 1 0 auto;
+ }
 
 .w-100 { width: 100%; }
 
