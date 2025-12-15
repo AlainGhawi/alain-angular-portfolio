@@ -144,6 +144,7 @@ html {
   font-family: var(--ff-jost);
   font-size: 10px;
   scroll-behavior: smooth;
+  height: 100%;
 }
 
 body {
@@ -154,9 +155,49 @@ body {
   position: relative!important;
   overflow-y: scroll!important;
   overflow-x: auto;
+  min-height: 100%;
 }
 
 body.loaded { overflow: visible; }
+
+/*-----------------------------------*\
+  #APP LAYOUT - STICKY FOOTER
+\*-----------------------------------*/
+
+app-root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100dvh;
+  padding-top: 60px;
+}
+
+/* Page components - expand to fill available space */
+app-root > router-outlet ~ * {
+  display: flex;
+  flex-direction: column;
+  flex: 1 0 auto;
+}
+
+/* Footer stays at bottom - explicitly prevent growing */
+app-root > app-footer {
+  flex: 0 0 auto;
+  margin-top: auto; /* pushes footer to bottom if content is short */
+}
+
+/* Article wrapper - must expand to fill page component */
+article {
+  display: flex;
+  flex-direction: column;
+  flex: 1 0 auto;
+}
+
+/* Sections inside article - expand to fill article */
+article > .section,
+article > .contact,
+article > .service,
+article > .portfolio {
+  flex: 1 0 auto;
+}
 
 :focus-visible { outline-offset: 4px; }
 
@@ -295,9 +336,12 @@ body.loaded { overflow: visible; }
 .header .btn { display: none; }
 
 .header {
-  position: sticky;
+  position: fixed;
   z-index: 9999;
   top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
   background-color: var(--white);
   box-shadow: var(--shadow);
   padding-block: 16px;

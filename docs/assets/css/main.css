@@ -90,7 +90,12 @@
   padding-block: 30px;
 }
 
-.client .slider-item { min-width: calc(50% - 15px); }
+.client .slider-item { min-width: auto; }
+
+.client .slider {
+  justify-content: center;
+  flex-wrap: wrap;
+}
 
 .client .slider::-webkit-scrollbar { display: none; }
 
