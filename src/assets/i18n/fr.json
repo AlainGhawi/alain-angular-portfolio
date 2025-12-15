@@ -24,7 +24,7 @@
         "SERVICE_2": "Rédaction Technique",
         "SERVICE_2_DESCRIPTION": "Documentation claire et concise avec Confluence, couvrant les bases de code, l'architecture des systèmes et les lignes directrices des projets.",
         "SERVICE_3": "Conception de Bases de Données",
-        "SERVICE_3_DESCRIPTION": "Conception et optimisation de bases de données relationnelles, principalement avec MSSQL, garantissant des performances élevées et l'intégrité des données.",
+        "SERVICE_3_DESCRIPTION": "Conception et optimisation de bases de données, principalement avec MSSQL et MongoDB, garantissant des performances élevées et l'intégrité des données.",
         "SERVICE_4": "DevOps",
         "SERVICE_4_DESCRIPTION": "Optimisation des workflows de développement avec Azure DevOps, pipelines CI/CD, conteneurisation et gestion de l'infrastructure cloud.",
         "SERVICE_5": "Consulting & Conseil",

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import emailjs from '@emailjs/browser';
 @Component({
   selector: 'app-contact',
@@ -9,11 +9,11 @@ import emailjs from '@emailjs/browser';
 export class ContactComponent {
 
   form: FormGroup = this.fb.group({
-    from_name:'',
+    from_name: ['', Validators.required],
     to_name: 'Alain',
-    from_email: '',
-    subject: '',
-    message: '',
+    from_email: ['', [Validators.required, Validators.email]],
+    subject: ['', Validators.required],
+    message: ['', Validators.required],
   });
   constructor(private fb:FormBuilder){ }
 

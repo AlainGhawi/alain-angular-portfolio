@@ -1,0 +1,10 @@
+.input-field.ng-touched.ng-invalid {
+  border-color: var(--orange-red);
+  box-shadow: inset 0 0 0 1px var(--orange-red);
+}
+
+/* Disabled button styling */
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}

@@ -24,7 +24,7 @@
         "SERVICE_2": "Frontend Development",
         "SERVICE_2_DESCRIPTION": "Clear & concise documentation using Confluence, covering codebases, systems architecture, & project guidelines.",
         "SERVICE_3": "Database Design",
-        "SERVICE_3_DESCRIPTION": "Design & optimization of relational databases, primarily with MSSQL, ensuring high performance & data integrity.",
+        "SERVICE_3_DESCRIPTION": "Design & optimization of databases, primarily with MSSQL and MongoDB, ensuring high performance & data integrity.",
         "SERVICE_4": "Cloud infrastructure",
         "SERVICE_4_DESCRIPTION": "Streamlining development workflows with Azure DevOps, CI/CD pipelines, containerization, & cloud infrastructure management.",
         "SERVICE_5": "Technical Writing",
