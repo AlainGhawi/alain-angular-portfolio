@@ -35,6 +35,14 @@
             ],
             "styles": [
               "src/styles.css",
+              "src/assets/css/require.css",
+              "src/assets/css/components/btn.css",
+              "src/assets/css/components/slider.css",
+              "src/assets/css/components/card.css",
+              "src/assets/css/main.css",
+              "src/assets/css/pages/service.css",
+              "src/assets/css/pages/portfolio.css",
+              "src/assets/css/pages/contact.css",
               {
                 "input": "node_modules/@ionic/angular/css/core.css"
               },
