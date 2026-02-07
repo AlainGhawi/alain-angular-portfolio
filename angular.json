@@ -110,10 +110,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "alainportfolio:build:production"
+              "buildTarget": "alainportfolio:build:production"
             },
             "development": {
-              "browserTarget": "alainportfolio:build:development"
+              "buildTarget": "alainportfolio:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -121,7 +121,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "alainportfolio:build"
+            "buildTarget": "alainportfolio:build"
           }
         },
         "test": {
