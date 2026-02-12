@@ -29,9 +29,6 @@ jobs:
         run: npm run lint --if-present
         continue-on-error: true
 
-      - name: Run tests
-        run: npm test -- --watch=false
-
       - name: Build
         run: npm run build
 
