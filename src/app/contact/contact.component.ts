@@ -1,11 +1,13 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import emailjs from '@emailjs/browser';
+import { EmailService, ContactFormData } from '../services/email.service';
+import { finalize } from 'rxjs/operators';
+
 @Component({
-    selector: 'app-contact',
-    templateUrl: './contact.component.html',
-    styleUrls: ['./contact.component.css'],
-    standalone: false
+  selector: 'app-contact',
+  templateUrl: './contact.component.html',
+  styleUrls: ['./contact.component.css'],
+  standalone: false
 })
 export class ContactComponent {
 
@@ -16,22 +18,58 @@ export class ContactComponent {
     subject: ['', Validators.required],
     message: ['', Validators.required],
   });
-  constructor(private fb:FormBuilder){ }
 
-  // This function is called when the form is submitted to send the email
-  // It uses the EmailJS service to send the email with the form data
-  // Make sure to replace 'your-service-id', 'your-template-id', and 'your-public-key' with your actual EmailJS credentials
-  async send() {
-    let response = await emailjs.send('your-service-id','your-template-id',{
+  isSubmitting = false;
+  submitSuccess = false;
+  submitError: string | null = null;
+
+  constructor(
+    private fb: FormBuilder,
+    private emailService: EmailService
+  ) {}
+
+  send() {
+    // Prevent duplicate submissions
+    if (!this.form.valid || this.isSubmitting) {
+      return;
+    }
+
+    // Reset previous states
+    this.isSubmitting = true;
+    this.submitSuccess = false;
+    this.submitError = null;
+
+    const formData: ContactFormData = {
       from_name: this.form.value.from_name,
       to_name: this.form.value.to_name,
       from_email: this.form.value.from_email,
       subject: this.form.value.subject,
-      message: this.form.value.message,
-      }, 'your-public-key');
+      message: this.form.value.message
+    };
 
-    alert('Your message has been sent! I will try to get back to you asap.');
-    this.form.reset();
+    this.emailService.sendContactEmail(formData)
+      .pipe(
+        finalize(() => {
+          this.isSubmitting = false;
+        })
+      )
+      .subscribe({
+        next: (success) => {
+          if (success) {
+            this.submitSuccess = true;
+            // Reset form after 3 seconds
+            setTimeout(() => {
+              this.form.reset();
+              this.form.patchValue({ to_name: 'Alain' });
+              this.submitSuccess = false;
+            }, 3000);
+          }
+        },
+        error: (error) => {
+          console.error('Email submission error:', error);
+          this.submitError = error.text ||
+            'Failed to send message. Please try again or email me directly.';
+        }
+      });
   }
-
 }

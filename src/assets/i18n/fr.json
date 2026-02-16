@@ -7,13 +7,15 @@
     "CONTACT": {
         "LABEL": "Prends contact",
         "TEXT": "J'aimerais avoir de vos nouvelles si vous avez des opportunités!",
-        "NAME": "Votre nom",
-        "YOUR_EMAIL": "Votre courriel",
+        "FULL_NAME": "Nom Complet",
+        "EMAIL": "Courriel",
         "SUBJECT": "Sujet",
         "MESSAGE": "Votre message",
         "SEND_MESSAGE": "Envoyer",
+        "SENDING": "Envoi en cours...",
+        "SUCCESS": "Message envoyé avec succès! Je vous répondrai bientôt.",
+        "ERROR": "Échec de l'envoi du message. Veuillez réessayer ou m'envoyer un courriel directement.",
         "LOCATION": "Situé maintenant",
-        "EMAIL": "Courriel",
         "PHONE": "Téléphone",
         "CONTACT_NOW": "Me Contacter"
     },

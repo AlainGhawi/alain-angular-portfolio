@@ -7,13 +7,15 @@
     "CONTACT": {
         "LABEL": "Get in touch",
         "TEXT": "I would love to hear from you if you have new opportunities!",
-        "NAME": "Your name",
-        "YOUR_EMAIL": "Your email",
+        "FULL_NAME": "Full Name",
+        "EMAIL": "Email",
         "SUBJECT": "Subject",
         "MESSAGE": "Your message",
         "SEND_MESSAGE": "Send message",
+        "SENDING": "Sending...",
+        "SUCCESS": "Message sent successfully! I'll get back to you soon.",
+        "ERROR": "Failed to send message. Please try again or email me directly.",
         "LOCATION": "Located now",
-        "EMAIL": "Email",
         "PHONE": "Phone",
         "CONTACT_NOW": "Contact Now"
     },

@@ -11,11 +11,11 @@
           </p>
           <div class="wrapper">
             <div>
-              <label for="name" class="label">{{ "CONTACT.NAME" | translate }}*</label>
+              <label for="name" class="label">{{ "CONTACT.FULL_NAME" | translate }}*</label>
               <input type="text" name="name" id="name" required class="input-field" formControlName="from_name">
             </div>
             <div>
-              <label for="email" class="label">{{ "CONTACT.YOUR_EMAIL" | translate }}*</label>
+              <label for="email" class="label">{{ "CONTACT.EMAIL" | translate }}*</label>
               <input type="email" name="email" id="email" required class="input-field" formControlName="from_email">
             </div>
           </div>
@@ -23,8 +23,32 @@
           <input type="text" name="subject" id="subject" class="input-field" formControlName="subject">
           <label for="message" class="label">{{ "CONTACT.MESSAGE" | translate }}* </label>
           <textarea name="message" id="message" required class="input-field" formControlName="message"></textarea>
-          <button type="submit" class="btn btn-tertiary" [disabled]="!form.valid">{{ "CONTACT.SEND_MESSAGE" | translate
-            }}</button>
+
+          @if (isSubmitting) {
+          <div class="submit-feedback">
+            <p class="body-md">{{ 'CONTACT.SENDING' | translate }}</p>
+          </div>
+          }
+
+          @if (submitSuccess) {
+          <div class="submit-feedback success">
+            <ion-icon name="checkmark-circle" aria-hidden="true"></ion-icon>
+            <p class="body-md">{{ 'CONTACT.SUCCESS' | translate }}</p>
+          </div>
+          }
+
+          @if (submitError) {
+          <div class="submit-feedback error">
+            <ion-icon name="alert-circle" aria-hidden="true"></ion-icon>
+            <p class="body-md">{{ submitError }}</p>
+          </div>
+          }
+
+          <button type="submit"
+                  class="btn btn-tertiary"
+                  [disabled]="!form.valid || isSubmitting">
+            {{ (isSubmitting ? 'CONTACT.SENDING' : 'CONTACT.SEND_MESSAGE') | translate }}
+          </button>
         </form>
       </div>
       <div>

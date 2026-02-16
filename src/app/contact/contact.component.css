@@ -8,3 +8,35 @@
   opacity: 0.5;
   cursor: not-allowed;
 }
+
+/* Submit feedback states */
+.submit-feedback {
+  margin-top: 20px;
+  padding: 15px 20px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: var(--fw-500);
+}
+
+.submit-feedback ion-icon {
+  font-size: 2.4rem;
+  flex-shrink: 0;
+}
+
+.submit-feedback.success {
+  background-color: hsl(142, 76%, 90%);
+  color: hsl(142, 76%, 30%);
+  border: 2px solid hsl(142, 76%, 50%);
+}
+
+.submit-feedback.error {
+  background-color: hsl(0, 100%, 90%);
+  color: hsl(0, 100%, 35%);
+  border: 2px solid var(--orange-red);
+}
+
+.submit-feedback p {
+  margin: 0;
+}

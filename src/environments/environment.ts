@@ -8,9 +8,14 @@
 
 export const environment = {
   production: false,
-  youtubeApiKey: 'YOUR_YOUTUBE_API_KEY_HERE',
+  youtubeApiKey: 'YOUTUBE_API_KEY',
   youtubeChannelId: 'UCLYvppaPMnewPjrrETcukyg',
   githubUsername: 'AlainGhawi',
   maxRepositories: 6,
-  maxVideos: 10
+  maxVideos: 10,
+  emailjs: {
+    serviceId: 'EMAILJS_SERVICE_ID',
+    templateId: 'EMAILJS_TEMPLATE_ID',
+    publicKey: 'EMAILJS_PUBLIC_KEY'
+  }
 };
