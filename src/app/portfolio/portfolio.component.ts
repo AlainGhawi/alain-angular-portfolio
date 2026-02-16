@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { GitHubProject, YouTubeVideo, TutorialArticle } from './portfolio.models';
 import { YouTubeService } from '../services/youtube.service';
+import { GitHubService } from '../services/github.service';
 import { environment } from '../../environments/environment';
 
 @Component({
@@ -11,49 +12,48 @@ import { environment } from '../../environments/environment';
 })
 export class PortfolioComponent implements OnInit {
 
-  githubProjects: GitHubProject[] = [
-    {
-      name: 'alain-angular-portfolio',
-      descriptionKey: 'PORTFOLIO.GITHUB.PROJECT_1_DESC',
-      url: 'https://github.com/AlainGhawi/alain-angular-portfolio',
-      language: 'TypeScript',
-      stars: 0,
-      forks: 0
-    },
-    {
-      name: 'placeholder-repo-2',
-      descriptionKey: 'PORTFOLIO.GITHUB.PROJECT_2_DESC',
-      url: 'https://github.com/AlainGhawi',
-      language: 'C#',
-      stars: 0,
-      forks: 0
-    },
-    {
-      name: 'placeholder-repo-3',
-      descriptionKey: 'PORTFOLIO.GITHUB.PROJECT_3_DESC',
-      url: 'https://github.com/AlainGhawi',
-      language: 'TypeScript',
-      stars: 0,
-      forks: 0
-    }
-  ];
-
+  githubProjects: GitHubProject[] = [];
   youtubeVideos: YouTubeVideo[] = [];
   tutorialArticles: TutorialArticle[] = [];
+
+  isLoadingRepos = true;
   isLoadingVideos = true;
+  reposError: string | null = null;
   videosError: string | null = null;
 
-  constructor(private youtubeService: YouTubeService) {}
+  constructor(
+    private youtubeService: YouTubeService,
+    private githubService: GitHubService
+  ) {}
 
   ngOnInit(): void {
+    this.loadGitHubRepositories();
     this.loadYouTubeVideos();
+  }
+
+  private loadGitHubRepositories(): void {
+    this.isLoadingRepos = true;
+    this.reposError = null;
+
+    this.githubService.getUserRepositories(environment.githubUsername, environment.maxRepositories)
+      .subscribe({
+        next: (repos) => {
+          this.githubProjects = repos;
+          this.isLoadingRepos = false;
+        },
+        error: (error) => {
+          console.error('Failed to load GitHub repositories:', error);
+          this.reposError = 'Failed to load repositories. Please try again later.';
+          this.isLoadingRepos = false;
+        }
+      });
   }
 
   private loadYouTubeVideos(): void {
     this.isLoadingVideos = true;
     this.videosError = null;
 
-    this.youtubeService.getChannelVideos(environment.youtubeChannelId, 10)
+    this.youtubeService.getChannelVideos(environment.youtubeChannelId, environment.maxVideos)
       .subscribe({
         next: (videos) => {
           this.youtubeVideos = videos;

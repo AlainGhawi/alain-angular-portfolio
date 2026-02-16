@@ -5,5 +5,8 @@
 export const environment = {
   production: true,
   youtubeApiKey: 'YOUR_YOUTUBE_API_KEY_HERE',
-  youtubeChannelId: 'UCLYvppaPMnewPjrrETcukyg'
+  youtubeChannelId: 'UCLYvppaPMnewPjrrETcukyg',
+  githubUsername: 'AlainGhawi',
+  maxRepositories: 6,
+  maxVideos: 10
 };

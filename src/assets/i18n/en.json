@@ -48,9 +48,10 @@
         "GITHUB": {
             "TITLE": "Open Source Projects",
             "VIEW_REPO": "View Repository",
-            "PROJECT_1_DESC": "Personal portfolio built with Angular 21, Ionic components, and custom webpack compression.",
-            "PROJECT_2_DESC": "Placeholder project description.",
-            "PROJECT_3_DESC": "Placeholder project description."
+            "LOADING": "Loading repositories...",
+            "ERROR": "Failed to Load Repositories",
+            "NO_REPOS": "No Repositories Available",
+            "NO_REPOS_DESC": "Check back soon for new projects!"
         },
         "YOUTUBE": {
             "TITLE": "Latest Videos",

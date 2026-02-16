@@ -8,6 +8,25 @@
         {{ "PORTFOLIO.GITHUB.TITLE" | translate }}
       </h2>
 
+      @if (isLoadingRepos) {
+      <!-- Loading state -->
+      <div class="empty-state">
+        <p class="body-sm">{{ "PORTFOLIO.GITHUB.LOADING" | translate }}</p>
+      </div>
+      } @else if (reposError) {
+      <!-- Error state -->
+      <div class="empty-state">
+        <h3 class="title-md">{{ "PORTFOLIO.GITHUB.ERROR" | translate }}</h3>
+        <p class="body-sm">{{ reposError }}</p>
+      </div>
+      } @else if (githubProjects.length === 0) {
+      <!-- Empty state -->
+      <div class="empty-state">
+        <h3 class="title-md">{{ "PORTFOLIO.GITHUB.NO_REPOS" | translate }}</h3>
+        <p class="body-sm">{{ "PORTFOLIO.GITHUB.NO_REPOS_DESC" | translate }}</p>
+      </div>
+      } @else {
+      <!-- Repository list -->
       <ul class="github-list">
         @for (project of githubProjects; track project.name) {
         <li class="card-container">
@@ -22,7 +41,7 @@
             </div>
 
             <div class="github-card-body">
-              <p class="body-sm">{{ project.descriptionKey | translate }}</p>
+              <p class="body-sm">{{ project.description }}</p>
 
               <div class="github-stats">
                 <span class="stat-item">
@@ -44,6 +63,7 @@
         </li>
         }
       </ul>
+      }
 
     </div>
   </section>

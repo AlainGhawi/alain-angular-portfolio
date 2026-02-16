@@ -48,9 +48,10 @@
         "GITHUB": {
             "TITLE": "Projets Open Source",
             "VIEW_REPO": "Voir le Dépôt",
-            "PROJECT_1_DESC": "Portfolio personnel construit avec Angular 21, composants Ionic et compression webpack personnalisée.",
-            "PROJECT_2_DESC": "Description du projet à venir.",
-            "PROJECT_3_DESC": "Description du projet à venir."
+            "LOADING": "Chargement des dépôts...",
+            "ERROR": "Échec du Chargement des Dépôts",
+            "NO_REPOS": "Aucun Dépôt Disponible",
+            "NO_REPOS_DESC": "Revenez bientôt pour de nouveaux projets!"
         },
         "YOUTUBE": {
             "TITLE": "Dernières Vidéos",

@@ -1,10 +1,11 @@
 export interface GitHubProject {
   name: string;
-  descriptionKey: string;
+  description: string;
   url: string;
   language: string;
   stars: number;
   forks: number;
+  topics?: string[];
 }
 
 export interface YouTubeVideo {
