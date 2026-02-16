@@ -43,5 +43,28 @@
         "SKILLS": "My Skills",
         "INTEREST": "Interested in working with me?",
         "TESTIMONIALS":"Testimonials"
+    },
+    "PORTFOLIO": {
+        "GITHUB": {
+            "TITLE": "Open Source Projects",
+            "VIEW_REPO": "View Repository",
+            "PROJECT_1_DESC": "Personal portfolio built with Angular 21, Ionic components, and custom webpack compression.",
+            "PROJECT_2_DESC": "Placeholder project description.",
+            "PROJECT_3_DESC": "Placeholder project description."
+        },
+        "YOUTUBE": {
+            "TITLE": "Latest Videos",
+            "VIEW_CHANNEL": "View Channel",
+            "LOADING": "Loading videos...",
+            "ERROR": "Failed to Load Videos",
+            "NO_VIDEOS": "No Videos Available",
+            "NO_VIDEOS_DESC": "Check back soon for new content!"
+        },
+        "ARTICLES": {
+            "TITLE": "Tutorial Articles",
+            "COMING_SOON": "Coming Soon",
+            "COMING_SOON_DESC": "I'm working on tutorial articles about software development. Stay tuned!",
+            "READ_MORE": "Read Article"
+        }
     }
 }

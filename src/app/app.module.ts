@@ -8,6 +8,7 @@ import { ContactComponent } from './contact/contact.component';
 import { ServiceComponent } from './service/service.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
+import { PortfolioComponent } from './portfolio/portfolio.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { TranslateModule } from '@ngx-translate/core';
 import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
@@ -21,6 +22,7 @@ import { provideTranslateHttpLoader } from '@ngx-translate/http-loader';
         ServiceComponent,
         HeaderComponent,
         FooterComponent,
+        PortfolioComponent,
     ],
     bootstrap: [AppComponent],
     imports: [

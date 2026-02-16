@@ -1,129 +1,159 @@
-<main>
-    <article>
+<article>
 
-      <!--
-        - #PORTFOLIO
-      -->
+  <!-- GITHUB PROJECTS -->
+  <section class="section github-projects" aria-labelledby="github-label">
+    <div class="container">
 
-      <section class="section portfolio" aria-labelledby="portfolio-label">
-        <div class="container">
+      <h2 class="section-title headline-md text-center" id="github-label">
+        {{ "PORTFOLIO.GITHUB.TITLE" | translate }}
+      </h2>
 
-          <h2 class="section-title headline-md text-center" id="portfolio-label">Latest Projects</h2>
+      <ul class="github-list">
+        @for (project of githubProjects; track project.name) {
+        <li class="card-container">
+          <div class="card card-md github-card">
 
-          <ul class="portfolio-list">
-
-            <li>
-              <div class="portfolio-card">
-
-                <div class="card-banner img-holder" style="--width: 800; --height: 540;">
-                  <img src="./assets/images/portfolio-1.jpg" width="800" height="540" loading="lazy"
-                    alt="Website Design for Marketing Agency Startup" class="img-cover">
-
-                </div>
-
-                <div class="card-content">
-
-                  <span class="chip label-md">Web Design</span>
-
-                  <h3 class="title-md">Website Design for Marketing Agency Startup</h3>
-
-                  <p class="card-text">
-                    I design and develop services for customers of all sizes, specializing in creating stylish, modern
-                    websites, web services and online stores
-                  </p>
-
-                  <a href="#" class="btn btn-primary">View Project</a>
-
-                </div>
-
+            <div class="github-card-header">
+              <ion-icon name="logo-github" class="github-icon" aria-hidden="true"></ion-icon>
+              <div>
+                <h3 class="card-title title-sm">{{ project.name }}</h3>
+                <span class="chip label-md">{{ project.language }}</span>
               </div>
-            </li>
+            </div>
 
-            <li>
-              <div class="portfolio-card">
+            <div class="github-card-body">
+              <p class="body-sm">{{ project.descriptionKey | translate }}</p>
 
-                <div class="card-banner img-holder" style="--width: 800; --height: 540;">
-                  <img src="./assets/images/portfolio-2.jpg" width="800" height="540" loading="lazy"
-                    alt="Website Design for Marketing Agency Startup" class="img-cover">
-
-                </div>
-
-                <div class="card-content">
-
-                  <span class="chip label-md">Web Design</span>
-
-                  <h3 class="title-md">Website Design for Marketing Agency Startup</h3>
-
-                  <p class="card-text">
-                    I design and develop services for customers of all sizes, specializing in creating stylish, modern
-                    websites, web services and online stores
-                  </p>
-
-                  <a href="#" class="btn btn-primary">View Project</a>
-
-                </div>
-
+              <div class="github-stats">
+                <span class="stat-item">
+                  <ion-icon name="star-outline" aria-hidden="true"></ion-icon>
+                  {{ project.stars }}
+                </span>
+                <span class="stat-item">
+                  <ion-icon name="git-branch-outline" aria-hidden="true"></ion-icon>
+                  {{ project.forks }}
+                </span>
               </div>
-            </li>
 
-            <li>
-              <div class="portfolio-card">
+              <a [href]="project.url" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                {{ "PORTFOLIO.GITHUB.VIEW_REPO" | translate }}
+              </a>
+            </div>
 
-                <div class="card-banner img-holder" style="--width: 800; --height: 540;">
-                  <img src="./assets/images/portfolio-3.jpg" width="800" height="540" loading="lazy"
-                    alt="Website Design for Marketing Agency Startup" class="img-cover">
+          </div>
+        </li>
+        }
+      </ul>
 
+    </div>
+  </section>
+
+  <!-- YOUTUBE VIDEOS -->
+  <section class="section youtube-videos" aria-labelledby="youtube-label">
+    <div class="container">
+
+      <h2 class="section-title headline-md text-center" id="youtube-label">
+        {{ "PORTFOLIO.YOUTUBE.TITLE" | translate }}
+      </h2>
+
+      @if (isLoadingVideos) {
+      <!-- Loading state -->
+      <div class="empty-state">
+        <p class="body-sm">{{ "PORTFOLIO.YOUTUBE.LOADING" | translate }}</p>
+      </div>
+      } @else if (videosError) {
+      <!-- Error state -->
+      <div class="empty-state">
+        <h3 class="title-md">{{ "PORTFOLIO.YOUTUBE.ERROR" | translate }}</h3>
+        <p class="body-sm">{{ videosError }}</p>
+      </div>
+      } @else if (youtubeVideos.length === 0) {
+      <!-- Empty state -->
+      <div class="empty-state">
+        <h3 class="title-md">{{ "PORTFOLIO.YOUTUBE.NO_VIDEOS" | translate }}</h3>
+        <p class="body-sm">{{ "PORTFOLIO.YOUTUBE.NO_VIDEOS_DESC" | translate }}</p>
+      </div>
+      } @else {
+      <!-- Video slider -->
+      <ul class="slider youtube-slider">
+        @for (video of youtubeVideos; track video.videoId) {
+        <li class="slider-item card-container">
+          <a [href]="getYoutubeUrl(video.videoId)" target="_blank" rel="noopener noreferrer" class="youtube-card-link">
+            <div class="card card-lg youtube-card">
+
+              <figure class="card-media youtube-thumbnail">
+                <img
+                  [src]="video.thumbnailUrl || getThumbnailUrl(video.videoId)"
+                  width="320"
+                  height="180"
+                  loading="lazy"
+                  [alt]="video.title"
+                  class="img-cover">
+                <div class="play-overlay" aria-hidden="true">
+                  <ion-icon name="play-circle"></ion-icon>
                 </div>
+              </figure>
 
-                <div class="card-content">
-
-                  <span class="chip label-md">Web Design</span>
-
-                  <h3 class="title-md">Website Design for Marketing Agency Startup</h3>
-
-                  <p class="card-text">
-                    I design and develop services for customers of all sizes, specializing in creating stylish, modern
-                    websites, web services and online stores
-                  </p>
-
-                  <a href="#" class="btn btn-primary">View Project</a>
-
-                </div>
-
+              <div class="card-content">
+                <h3 class="card-title title-sm">{{ video.title }}</h3>
               </div>
-            </li>
 
-            <li>
-              <div class="portfolio-card">
+            </div>
+          </a>
+        </li>
+        }
+      </ul>
+      }
 
-                <div class="card-banner img-holder" style="--width: 800; --height: 540;">
-                  <img src="./assets/images/portfolio-4.jpg" width="800" height="540" loading="lazy"
-                    alt="Website Design for Marketing Agency Startup" class="img-cover">
+      <div class="youtube-channel-link">
+        <a href="https://www.youtube.com/channel/UCLYvppaPMnewPjrrETcukyg"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="btn btn-primary">
+          <ion-icon name="logo-youtube" aria-hidden="true"></ion-icon>
+          {{ "PORTFOLIO.YOUTUBE.VIEW_CHANNEL" | translate }}
+        </a>
+      </div>
 
-                </div>
+    </div>
+  </section>
 
-                <div class="card-content">
+  <!-- TUTORIAL ARTICLES -->
+  <section class="section tutorial-articles" aria-labelledby="articles-label">
+    <div class="container">
 
-                  <span class="chip label-md">Web Design</span>
+      <h2 class="section-title headline-md text-center" id="articles-label">
+        {{ "PORTFOLIO.ARTICLES.TITLE" | translate }}
+      </h2>
 
-                  <h3 class="title-md">Website Design for Marketing Agency Startup</h3>
+      @if (tutorialArticles.length === 0) {
+      <!-- Empty state -->
+      <div class="empty-state">
+        <h3 class="title-md">{{ "PORTFOLIO.ARTICLES.COMING_SOON" | translate }}</h3>
+        <p class="body-sm">{{ "PORTFOLIO.ARTICLES.COMING_SOON_DESC" | translate }}</p>
+      </div>
+      } @else {
+      <!-- Article cards -->
+      <ul class="articles-list">
+        @for (article of tutorialArticles; track article.titleKey) {
+        <li class="card-container">
+          <div class="card card-md article-card">
+            <div class="article-meta">
+              <span class="chip label-md">{{ article.categoryKey | translate }}</span>
+              <span class="article-date label-md">{{ article.date }}</span>
+            </div>
+            <h3 class="card-title title-sm">{{ article.titleKey | translate }}</h3>
+            <p class="body-sm">{{ article.summaryKey | translate }}</p>
+            <a [href]="article.url" target="_blank" rel="noopener noreferrer" class="btn btn-tertiary">
+              {{ "PORTFOLIO.ARTICLES.READ_MORE" | translate }}
+            </a>
+          </div>
+        </li>
+        }
+      </ul>
+      }
 
-                  <p class="card-text">
-                    I design and develop services for customers of all sizes, specializing in creating stylish, modern
-                    websites, web services and online stores
-                  </p>
+    </div>
+  </section>
 
-                  <a href="#" class="btn btn-primary">View Project</a>
-
-                </div>
-
-              </div>
-            </li>
-
-          </ul>
-
-        </div>
-      </section>
-
-    </article>
-  </main>
+</article>

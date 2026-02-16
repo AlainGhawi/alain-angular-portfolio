@@ -9,5 +9,8 @@
 /docs/
 
 # Claude AI assistant configuration (personal preferences)
-CLAUDE.md
+.claude
 
+# Environment files with API keys (keep local, don't commit)
+/src/environments/environment.local.ts
+/src/environments/environment.prod.local.ts
