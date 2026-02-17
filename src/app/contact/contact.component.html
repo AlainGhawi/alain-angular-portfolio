@@ -24,26 +24,6 @@
           <label for="message" class="label">{{ "CONTACT.MESSAGE" | translate }}* </label>
           <textarea name="message" id="message" required class="input-field" formControlName="message"></textarea>
 
-          @if (isSubmitting) {
-          <div class="submit-feedback">
-            <p class="body-md">{{ 'CONTACT.SENDING' | translate }}</p>
-          </div>
-          }
-
-          @if (submitSuccess) {
-          <div class="submit-feedback success">
-            <ion-icon name="checkmark-circle" aria-hidden="true"></ion-icon>
-            <p class="body-md">{{ 'CONTACT.SUCCESS' | translate }}</p>
-          </div>
-          }
-
-          @if (submitError) {
-          <div class="submit-feedback error">
-            <ion-icon name="alert-circle" aria-hidden="true"></ion-icon>
-            <p class="body-md">{{ submitError }}</p>
-          </div>
-          }
-
           <button type="submit"
                   class="btn btn-tertiary"
                   [disabled]="!form.valid || isSubmitting">

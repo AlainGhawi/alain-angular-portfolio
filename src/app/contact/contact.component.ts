@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { ToastController } from '@ionic/angular';
+import { TranslateService } from '@ngx-translate/core';
 import { EmailService, ContactFormData } from '../services/email.service';
 import { finalize } from 'rxjs/operators';
 
@@ -20,13 +22,27 @@ export class ContactComponent {
   });
 
   isSubmitting = false;
-  submitSuccess = false;
-  submitError: string | null = null;
 
   constructor(
     private fb: FormBuilder,
-    private emailService: EmailService
+    private emailService: EmailService,
+    private toastController: ToastController,
+    private translate: TranslateService
   ) {}
+
+  private async showToast(messageKey: string, color: 'success' | 'danger') {
+    const message = this.translate.instant(messageKey);
+    const toast = await this.toastController.create({
+      message,
+      duration: 4000,
+      position: 'bottom',
+      color,
+      cssClass: 'contact-toast',
+      icon: color === 'success' ? 'checkmark-circle' : 'alert-circle',
+      buttons: [{ icon: 'close', role: 'cancel' }]
+    });
+    await toast.present();
+  }
 
   send() {
     // Prevent duplicate submissions
@@ -34,10 +50,7 @@ export class ContactComponent {
       return;
     }
 
-    // Reset previous states
     this.isSubmitting = true;
-    this.submitSuccess = false;
-    this.submitError = null;
 
     const formData: ContactFormData = {
       from_name: this.form.value.from_name,
@@ -56,19 +69,14 @@ export class ContactComponent {
       .subscribe({
         next: (success) => {
           if (success) {
-            this.submitSuccess = true;
-            // Reset form after 3 seconds
-            setTimeout(() => {
-              this.form.reset();
-              this.form.patchValue({ to_name: 'Alain' });
-              this.submitSuccess = false;
-            }, 3000);
+            this.showToast('CONTACT.SUCCESS', 'success');
+            this.form.reset();
+            this.form.patchValue({ to_name: 'Alain' });
           }
         },
         error: (error) => {
           console.error('Email submission error:', error);
-          this.submitError = error.text ||
-            'Failed to send message. Please try again or email me directly.';
+          this.showToast('CONTACT.ERROR', 'danger');
         }
       });
   }
