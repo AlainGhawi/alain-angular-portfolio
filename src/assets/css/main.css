@@ -52,7 +52,13 @@
 
 .hero .container {
   display: grid;
-  gap: 70px;
+  gap: 30px;
+}
+
+.hero .img-cover {
+  max-height: 300px;
+  width: auto;
+  margin-inline: auto;
 }
 
 .hero-subtitle {
@@ -78,27 +84,45 @@
   padding-block: 30px;
 }
 
-.client .slider-item { min-width: auto; }
+.client .slider-item {
+  min-width: calc(30% - 12px);
+}
+
+.client .slider-item img {
+  height: 30px;
+}
 
 .client .slider {
-  justify-content: center;
-  flex-wrap: wrap;
+  scrollbar-width: none;
 }
 
 .client .slider::-webkit-scrollbar { display: none; }
 
 
+.about figure img {
+  max-width: 250px;
+  display: block;
+  margin-inline: auto;
+}
+
+.skill figure svg {
+  max-width: 280px;
+  display: block;
+  margin-inline: auto;
+}
+
 .about .container {
   display: grid;
-  gap: 50px;
+  gap: 25px;
 }
 
 .about .section-text { margin-block: 25px 16px; }
 
 .about-list {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  gap: 25px;
+  gap: 15px 25px;
 }
 
 .about-list .list-text {
@@ -124,12 +148,16 @@
 .skill .container,
 .skill-list { display: grid; }
 
-.skill .container { gap: 50px; }
+.skill .container { gap: 25px; }
 
 .skill-list {
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(2, 1fr);
   gap: 15px;
 }
+
+.skill-list > li { display: flex; }
+
+.skill-list .card { flex: 1; }
 
 .skill .card ion-icon { font-size: 3rem; }
 
@@ -214,7 +242,11 @@
    * CLIENT, ABOUT & SKILL
    */
 
-  .client .slider-item { min-width: calc(33.33% - 20px); }
+  .client .slider-item {
+    min-width: calc(33.33% - 20px);
+  }
+
+  .client .slider-item img { height: 50px; }
 
   .client .slider-item .w-100,
   .about-banner,
@@ -239,6 +271,8 @@
    * HERO
    */
 
+  .hero .container { gap: 50px; }
+
   .hero-text { --fs-18: 2rem; }
 
   /* .hero::after {
@@ -253,6 +287,10 @@
   /**
    * CLIENT
    */
+
+  .about .container { gap: 40px; }
+
+  .client .slider { justify-content: center; }
 
   .client .slider-item { min-width: calc(25% - 22.5px); }
 
@@ -277,6 +315,24 @@
     grid-template-columns: 1fr 1fr;
     align-items: center;
   }
+
+  .hero .container { gap: 70px; }
+
+  .hero .img-cover {
+    max-height: none;
+    width: 100%;
+  }
+
+  .about figure img,
+  .skill figure svg {
+    max-width: none;
+  }
+
+  .about .container { gap: 50px; }
+
+  .skill .container { gap: 50px; }
+
+  .skill-list { grid-template-columns: repeat(3, 1fr); }
 
 
 

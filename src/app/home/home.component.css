@@ -4,6 +4,7 @@
   display: inline-block;       /* needed so width animates */
   overflow: hidden;            /* hide the text that hasn’t “typed” yet */
   white-space: nowrap;         /* keep it on one line */
+  max-width: 100%;             /* prevent horizontal overflow on mobile */
 
   /* caret */
   border-right: .15em solid currentColor;
@@ -16,7 +17,7 @@
 
 @keyframes typing {
   from { width: 0; }           /* start with no width */
-  to   { width: 50%; }
+  to   { width: 100%; }
 }
 
 @keyframes blink-caret {

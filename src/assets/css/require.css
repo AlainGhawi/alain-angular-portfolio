@@ -50,14 +50,14 @@
 
   --ff-jost: 'Jost', sans-serif;
 
-  --fs-45: 4.5rem;
-  --fs-38: 3.8rem;
-  --fs-32: 3.2rem;
-  --fs-27: 2.7rem;
-  --fs-26: 2.6rem;
-  --fs-22: 2.2rem;
-  --fs-20: 2rem;
-  --fs-18: 1.8rem;
+  --fs-45: 2.8rem;
+  --fs-38: 2.6rem;
+  --fs-32: 2.4rem;
+  --fs-27: 2.2rem;
+  --fs-26: 2.2rem;
+  --fs-22: 2rem;
+  --fs-20: 1.8rem;
+  --fs-18: 1.6rem;
   --fs-17: 1.7rem;
   --fs-14: 1.4rem;
   --fs-12: 1.2rem;
@@ -70,7 +70,7 @@
    * spacing
    */
 
-  --section-padding: 60px;
+  --section-padding: 40px;
   /**
    * shadow
    */
@@ -426,11 +426,16 @@ article > .portfolio {
 
 @media (min-width: 575px) {
 
+  .headline-lg { --fs-45: 3.5rem; }
+  .headline-md { --fs-38: 3.2rem; }
+  .headline-sm { --fs-32: 2.8rem; }
   .title-lg { --fs-27: 3.5rem; }
+  .title-md { --fs-26: 2.6rem; }
 
   .container {
-    max-width: 100%;
-    padding-inline: .75rem;
+    max-width: 540px;
+    margin-inline: auto;
+    padding-inline: 16px;
   }
 }
 
@@ -448,11 +453,11 @@ article > .portfolio {
    * TYPOGRAPHY
    */
 
-  .headline-lg { --fs-45: 6rem; }
+  .headline-lg { --fs-45: 4.5rem; }
 
-  .headline-md { --fs-38: 4.5rem; }
+  .headline-md { --fs-38: 3.8rem; }
 
-  .title-md { --fs-26: 3.2rem; }
+  .title-md { --fs-26: 2.8rem; }
 
 
 
@@ -460,7 +465,7 @@ article > .portfolio {
    * REUSED STYLE
    */
 
-  .section { --section-padding: 100px; }
+  .section { --section-padding: 80px; }
 
   .section-title { margin-block-end: 40px; }
 
@@ -496,6 +501,8 @@ article > .portfolio {
    * TYPOGRAPHY
    */
 
+  .headline-lg { --fs-45: 5.5rem; }
+
   .headline-md { --fs-38: 5rem; }
 
   .title-lg { --fs-27: 4rem; }
@@ -507,6 +514,8 @@ article > .portfolio {
   /**
    * REUSED STYLE
    */
+
+  .section { --section-padding: 100px; }
 
   .section-title { margin-block-end: 60px; }
 

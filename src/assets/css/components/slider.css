@@ -1,7 +1,7 @@
 .slider {
   display: flex;
   align-items: center;
-  gap: 30px;
+  gap: 16px;
   overflow-x: auto;
   scroll-snap-type: inline mandatory;
 }
@@ -10,4 +10,8 @@
 
 .slider-item img {
   height: 50px; /* Set the desired height */
+}
+
+@media (min-width: 768px) {
+  .slider { gap: 30px; }
 }

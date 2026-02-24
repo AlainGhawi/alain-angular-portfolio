@@ -7,16 +7,20 @@
     <nav class="navbar" data-navbar [ngClass]="status ? 'active' : ''">
       <ul class="navbar-list">
         <li class="navbar-item">
-          <a routerLink="/home" class="label-lg navbar-link has-after" routerLinkActive="active">Home</a>
+          <a routerLink="/home" class="label-lg navbar-link has-after" routerLinkActive="active"
+            (click)="status = false">Home</a>
         </li>
         <li class="navbar-item">
-          <a routerLink="/services" class="label-lg navbar-link has-after" routerLinkActive="active">Services</a>
+          <a routerLink="/services" class="label-lg navbar-link has-after" routerLinkActive="active"
+            (click)="status = false">Services</a>
         </li>
         <li class="navbar-item">
-          <a routerLink="/portfolio" class="label-lg navbar-link has-after" routerLinkActive="active">Portfolio</a>
+          <a routerLink="/portfolio" class="label-lg navbar-link has-after" routerLinkActive="active"
+            (click)="status = false">Portfolio</a>
         </li>
         <li class="navbar-item">
-          <a routerLink="/contact" class="label-lg navbar-link has-after" routerLinkActive="active">Contact</a>
+          <a routerLink="/contact" class="label-lg navbar-link has-after" routerLinkActive="active"
+            (click)="status = false">Contact</a>
         </li>
       </ul>
     </nav>
