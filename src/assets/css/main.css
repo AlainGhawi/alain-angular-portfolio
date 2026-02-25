@@ -153,16 +153,20 @@
 .skill .container { gap: 25px; }
 
 .skill-list {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 10px;
 }
 
 .skill-list > li {
   display: flex;
   min-width: 0;
+  overflow: hidden;
 }
 
-.skill-list .card { flex: 1; }
+.skill-list .card {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+}
 
 .skill .card ion-icon { font-size: 3rem; }
 
@@ -172,6 +176,7 @@
   font-weight: var(--fw-500);
   min-width: 0;
   overflow-wrap: break-word;
+  word-break: break-word;
 }
 
 .cta {
@@ -262,6 +267,10 @@
     margin-inline: auto;
   }
 
+  .skill-list {
+    grid-template-columns: repeat(2, 200px);
+    justify-content: center;
+  }
 
 
   /**
@@ -342,7 +351,7 @@
 
   .skill .container { gap: 50px; }
 
-  .skill-list { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .skill-list { grid-template-columns: repeat(3, 200px); }
 
 
 

@@ -28,6 +28,11 @@
 .service-list > .card-container {
   container-type: normal;
   min-width: 0;
+  display: flex;
+}
+
+.service-list > .card-container > .card {
+  flex: 1;
 }
 
 .service .card-md {
@@ -86,16 +91,15 @@
     height: 70px;
   }
 
-}
-
-@media (min-width: 992px) {
-
-  .service-list { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .service-list {
+    grid-template-columns: repeat(2, 350px);
+    justify-content: center;
+  }
 
 }
 
 @media (min-width: 1200px) {
 
-  .service-list { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .service-list { grid-template-columns: repeat(3, 350px); }
 
 }
