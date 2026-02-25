@@ -153,11 +153,14 @@
 .skill .container { gap: 25px; }
 
 .skill-list {
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 10px;
 }
 
-.skill-list > li { display: flex; }
+.skill-list > li {
+  display: flex;
+  min-width: 0;
+}
 
 .skill-list .card { flex: 1; }
 
@@ -167,6 +170,8 @@
   color: var(--jet);
   font-size: 1.6rem;
   font-weight: var(--fw-500);
+  min-width: 0;
+  overflow-wrap: break-word;
 }
 
 .cta {
@@ -337,7 +342,7 @@
 
   .skill .container { gap: 50px; }
 
-  .skill-list { grid-template-columns: repeat(3, 1fr); }
+  .skill-list { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 
 
 
