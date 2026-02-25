@@ -411,6 +411,10 @@ article > .portfolio {
   padding-block: 18px;
 }
 
+.footer p {
+  font-size: 1.2rem;
+}
+
 .social-list {
   display: flex;
   justify-content: center;
@@ -465,6 +469,8 @@ article > .portfolio {
    * REUSED STYLE
    */
 
+  .container { max-width: 720px; }
+
   .section { --section-padding: 80px; }
 
   .section-title { margin-block-end: 40px; }
@@ -514,6 +520,8 @@ article > .portfolio {
   /**
    * REUSED STYLE
    */
+
+  .container { max-width: 960px; }
 
   .section { --section-padding: 100px; }
 

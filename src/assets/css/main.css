@@ -105,10 +105,8 @@
   margin-inline: auto;
 }
 
-.skill figure svg {
-  max-width: 280px;
-  display: block;
-  margin-inline: auto;
+.skill figure {
+  display: none;
 }
 
 .about .container {
@@ -143,7 +141,11 @@
   gap: 15px 25px;
 }
 
-.skill { padding-block-end: 0; }
+.skill { padding-block-end: var(--section-padding); }
+
+@media (min-width: 992px) {
+  .skill { padding-block-end: 0; }
+}
 
 .skill .container,
 .skill-list { display: grid; }
@@ -152,7 +154,7 @@
 
 .skill-list {
   grid-template-columns: repeat(2, 1fr);
-  gap: 15px;
+  gap: 10px;
 }
 
 .skill-list > li { display: flex; }
@@ -323,9 +325,12 @@
     width: 100%;
   }
 
-  .about figure img,
-  .skill figure svg {
+  .about figure img {
     max-width: none;
+  }
+
+  .skill figure {
+    display: block;
   }
 
   .about .container { gap: 50px; }
