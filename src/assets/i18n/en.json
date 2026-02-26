@@ -44,7 +44,10 @@
         "CLIENTS": "Happy Clients",
         "SKILLS": "My Skills",
         "INTEREST": "Interested in working with me?",
-        "TESTIMONIALS":"Testimonials"
+        "TESTIMONIALS": "Testimonials"
+    },
+    "CV": {
+        "TITLE": "My CV"
     },
     "PORTFOLIO": {
         "GITHUB": {

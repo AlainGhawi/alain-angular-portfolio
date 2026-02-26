@@ -13,6 +13,8 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { TranslateModule } from '@ngx-translate/core';
 import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 import { provideTranslateHttpLoader } from '@ngx-translate/http-loader';
+import { CvComponent } from './cv/cv.component';
+import { SafePipe } from './pipes/safe.pipe';
 
 @NgModule({
     declarations: [
@@ -23,6 +25,8 @@ import { provideTranslateHttpLoader } from '@ngx-translate/http-loader';
         HeaderComponent,
         FooterComponent,
         PortfolioComponent,
+        CvComponent,
+        SafePipe,
     ],
     bootstrap: [AppComponent],
     imports: [

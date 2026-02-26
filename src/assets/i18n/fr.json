@@ -46,6 +46,9 @@
         "INTEREST": "Intéressé(e) à travailler avec moi ?",
         "TESTIMONIALS": "Témoignages"
     },
+    "CV": {
+        "TITLE": "Mon CV"
+    },
     "PORTFOLIO": {
         "GITHUB": {
             "TITLE": "Projets Open Source",
