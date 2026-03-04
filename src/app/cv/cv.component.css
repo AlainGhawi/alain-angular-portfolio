@@ -1,0 +1,21 @@
+.cv {
+  padding-block-start: var(--section-padding);
+}
+
+.cv-viewer {
+  margin-block-start: 25px;
+}
+
+.cv-viewer iframe {
+  width: 100%;
+  height: 80vh;
+  border: none;
+  border-radius: 8px;
+}
+
+
+@media (max-width: 575px) {
+  .cv-viewer iframe {
+    height: 60vh;
+  }
+}

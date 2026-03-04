@@ -1,0 +1,15 @@
+<article>
+
+  <section class="section cv" aria-labelledby="cv-label">
+    <div class="container">
+
+      <h2 class="section-title headline-md text-center" id="cv-label">{{ "CV.TITLE" | translate }}</h2>
+
+      <div class="cv-viewer">
+        <iframe [src]="pdfUrl | safe" title="Alain Ghawi Resume"></iframe>
+      </div>
+
+    </div>
+  </section>
+
+</article>
