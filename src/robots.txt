@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://alainghawi.github.io/alain-angular-portfolio/sitemap.xml
