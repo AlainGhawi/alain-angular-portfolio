@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import { BrowserModule, provideClientHydration, withEventReplay } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { IonicModule } from '@ionic/angular';
@@ -41,7 +41,8 @@ import { SafePipe } from './pipes/safe.pipe';
         provideTranslateHttpLoader({
             prefix: './assets/i18n/',
             suffix: '.json'
-        })
+        }),
+        provideClientHydration(withEventReplay())
     ]
 })
 export class AppModule { }

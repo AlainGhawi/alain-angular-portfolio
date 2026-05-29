@@ -17,7 +17,7 @@
               "path": "src/custom-webpack.config.js",
               "replaceDuplicatePlugins": true
             },
-            "outputPath": "docs",
+            "outputPath": "dist/alainportfolio/browser",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
@@ -83,6 +83,7 @@
           },
           "configurations": {
             "production": {
+              "baseHref": "/alain-angular-portfolio/",
               "fileReplacements": [
                 {
                   "replace": "src/environments/environment.ts",
@@ -161,6 +162,77 @@
               "browserTarget": "alainportfolio:build:production"
             }
           }
+        },
+        "server": {
+          "builder": "@angular-devkit/build-angular:server",
+          "options": {
+            "outputPath": "dist/alainportfolio/server",
+            "main": "src/server.ts",
+            "tsConfig": "tsconfig.server.json"
+          },
+          "configurations": {
+            "production": {
+              "outputHashing": "media",
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.prod.ts"
+                }
+              ]
+            },
+            "development": {
+              "buildOptimizer": false,
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.local.ts"
+                }
+              ],
+              "optimization": false,
+              "sourceMap": true,
+              "extractLicenses": false,
+              "vendorChunk": true
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve-ssr": {
+          "builder": "@angular-devkit/build-angular:ssr-dev-server",
+          "configurations": {
+            "development": {
+              "browserTarget": "alainportfolio:build:development",
+              "serverTarget": "alainportfolio:server:development"
+            },
+            "production": {
+              "browserTarget": "alainportfolio:build:production",
+              "serverTarget": "alainportfolio:server:production"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "prerender": {
+          "builder": "@angular-devkit/build-angular:prerender",
+          "options": {
+            "routes": [
+              "/",
+              "/home",
+              "/contact",
+              "/services",
+              "/portfolio",
+              "/cv"
+            ]
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "alainportfolio:build:production",
+              "serverTarget": "alainportfolio:server:production"
+            },
+            "development": {
+              "browserTarget": "alainportfolio:build:development",
+              "serverTarget": "alainportfolio:server:development"
+            }
+          },
+          "defaultConfiguration": "production"
         }
       }
     }
