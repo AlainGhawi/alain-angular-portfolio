@@ -22,14 +22,21 @@
 }
 
 .client-item {
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: 22px;
-  letter-spacing: 0.08em;
-  color: var(--muted);
-  transition: color 0.2s;
+  display: flex;
+  align-items: center;
+  opacity: 1;
   text-decoration: none;
 }
 
-.client-item:hover {
-  color: var(--amber);
+.client-item img {
+  height: 28px;
+  width: auto;
+  display: block;
+  filter: brightness(1);
+  transition: filter 0.25s ease;
+}
+
+.client-item:hover img {
+  /* white → #f4811f */
+  filter: brightness(0) invert(54%) sepia(100%) saturate(310%) hue-rotate(349deg) brightness(88%);
 }
