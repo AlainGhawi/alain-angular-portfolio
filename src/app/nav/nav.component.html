@@ -1,0 +1,41 @@
+<nav id="nav" [class.scrolled]="scrolled">
+  <div class="nav-inner">
+    <a routerLink="/home" class="nav-logo">AG<span>.</span></a>
+
+    <ul class="nav-links">
+      <li><a href="javascript:void(0)" (click)="scrollTo('about')">{{ 'NAV.ABOUT' | translate }}</a></li>
+      <li><a href="javascript:void(0)" (click)="scrollTo('projects')">{{ 'NAV.WORK' | translate }}</a></li>
+      <li><a href="javascript:void(0)" (click)="scrollTo('open-source')">{{ 'NAV.PROJECTS' | translate }}</a></li>
+      <li><a href="javascript:void(0)" (click)="scrollTo('testimonials')">{{ 'NAV.REVIEWS' | translate }}</a></li>
+    </ul>
+
+    <div class="nav-right">
+      <div class="lang-switcher">
+        <button class="fi fi-us" (click)="changeLanguage('en')" aria-label="English"></button>
+        <button class="fi fi-fr" (click)="changeLanguage('fr')" aria-label="Français"></button>
+      </div>
+      <a routerLink="/contact" class="nav-cta">{{ 'NAV.GET_IN_TOUCH' | translate }}</a>
+      <button class="hamburger" [class.open]="menuOpen" (click)="toggleMenu()" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<div class="mobile-drawer" [class.open]="menuOpen">
+  <ul class="drawer-links">
+    <li><a href="javascript:void(0)" (click)="scrollTo('about')">{{ 'NAV.ABOUT' | translate }}</a></li>
+    <li><a href="javascript:void(0)" (click)="scrollTo('projects')">{{ 'NAV.WORK' | translate }}</a></li>
+    <li><a href="javascript:void(0)" (click)="scrollTo('open-source')">{{ 'NAV.PROJECTS' | translate }}</a></li>
+    <li><a href="javascript:void(0)" (click)="scrollTo('testimonials')">{{ 'NAV.REVIEWS' | translate }}</a></li>
+    <li><a routerLink="/contact" (click)="menuOpen = false" class="drawer-cta">{{ 'NAV.GET_IN_TOUCH' | translate }}</a></li>
+  </ul>
+  <div class="drawer-lang">
+    <button class="fi fi-us" (click)="changeLanguage('en')" aria-label="English"></button>
+    <button class="fi fi-fr" (click)="changeLanguage('fr')" aria-label="Français"></button>
+  </div>
+</div>
+
+<div class="drawer-backdrop" [class.open]="menuOpen" (click)="menuOpen = false"></div>

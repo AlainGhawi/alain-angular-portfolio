@@ -1,5 +1,181 @@
 /* You can add global styles to this file, and also import other style files */
 
+/* ── Design tokens ── */
+:root {
+  --bg:        #0e0e0e;
+  --bg2:       #141414;
+  --bg3:       #1a1a1a;
+  --border:    rgba(255, 255, 255, 0.07);
+  --amber:     #f4811f;
+  --amber2:    #ffb347;
+  --amber-dim: rgba(244, 129, 31, 0.12);
+  --white:     #f0ece4;
+  --muted:     #7a7570;
+  --text:      #cdc8be;
+}
+
+/* ── Base resets ── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--bg) !important;
+  color: var(--text) !important;
+  font-family: 'DM Sans', sans-serif !important;
+  font-size: 16px;
+  line-height: 1.65;
+  overflow-x: hidden;
+  cursor: none !important;
+}
+
+/* ── Noise overlay ── */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");
+  opacity: 0.03;
+  pointer-events: none;
+}
+
+/* ── Gradient mesh background ── */
+.mesh {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(ellipse 700px 500px at 85% 10%, rgba(244, 129, 31, 0.07) 0%, transparent 60%),
+    radial-gradient(ellipse 500px 400px at 10% 80%, rgba(244, 129, 31, 0.04) 0%, transparent 60%);
+}
+
+/* ── Custom cursor ── */
+.cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  width: 10px;
+  height: 10px;
+  background: var(--amber);
+  border-radius: 50%;
+  pointer-events: none;
+  transition: transform 0.15s ease, opacity 0.2s;
+  transform: translate(-50%, -50%);
+}
+.cursor-ring {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9998;
+  width: 36px;
+  height: 36px;
+  border: 1px solid rgba(244, 129, 31, 0.5);
+  border-radius: 50%;
+  pointer-events: none;
+  transition: transform 0.35s ease, width 0.25s, height 0.25s, opacity 0.2s;
+  transform: translate(-50%, -50%);
+}
+body:has(a:hover) .cursor-ring,
+body:has(button:hover) .cursor-ring {
+  width: 56px;
+  height: 56px;
+  border-color: var(--amber);
+}
+
+/* ── Scroll reveal ── */
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+[data-reveal].visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+[data-reveal="delay-1"] { transition-delay: 0.1s; }
+[data-reveal="delay-2"] { transition-delay: 0.2s; }
+[data-reveal="delay-3"] { transition-delay: 0.3s; }
+[data-reveal="delay-4"] { transition-delay: 0.4s; }
+
+/* ── Shared layout ── */
+.container {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 40px;
+  position: relative;
+  z-index: 1;
+}
+
+section { padding: 100px 0; position: relative; z-index: 1; }
+
+.section-label {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  color: var(--amber);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+.section-label::before {
+  content: '';
+  display: block;
+  width: 28px;
+  height: 1px;
+  background: var(--amber);
+}
+
+.section-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(40px, 5vw, 68px);
+  color: var(--white);
+  line-height: 0.95;
+  letter-spacing: 0.01em;
+  margin-bottom: 56px;
+}
+
+/* ── Shared button styles ── */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--amber);
+  color: #0e0e0e;
+  font-weight: 600;
+  font-size: 14px;
+  padding: 14px 28px;
+  border-radius: 4px;
+  text-decoration: none;
+  letter-spacing: 0.02em;
+  transition: background 0.2s, transform 0.2s;
+  border: none;
+  cursor: none;
+}
+.btn-primary:hover { background: var(--amber2); transform: translateY(-2px); }
+
+.btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--white);
+  font-size: 14px;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 2px;
+  transition: color 0.2s, border-color 0.2s;
+}
+.btn-ghost:hover { color: var(--amber); border-color: var(--amber); }
+
+/* ── Responsive ── */
+@media (max-width: 900px) {
+  .container { padding: 0 24px; }
+}
+
 ion-toast.contact-toast {
   --min-height: 60px;
   font-size: 1.6rem;

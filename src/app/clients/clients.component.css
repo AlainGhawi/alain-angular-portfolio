@@ -1,0 +1,35 @@
+#clients {
+  padding: 60px 0;
+  border-top: 1px solid var(--border);
+}
+
+.clients-label {
+  text-align: center;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  color: var(--muted);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 36px;
+}
+
+.clients-logos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 56px;
+  flex-wrap: wrap;
+}
+
+.client-item {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 22px;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+  transition: color 0.2s;
+  text-decoration: none;
+}
+
+.client-item:hover {
+  color: var(--amber);
+}

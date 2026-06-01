@@ -1,4 +1,90 @@
 {
+    "NAV": {
+        "ABOUT": "About",
+        "WORK": "Work",
+        "PROJECTS": "Projects",
+        "REVIEWS": "Reviews",
+        "GET_IN_TOUCH": "Get in Touch"
+    },
+    "HERO": {
+        "EYEBROW": "Available for new projects",
+        "FIRST_NAME": "Alain",
+        "LAST_NAME": "Ghawi",
+        "ROLE": "Software Engineer",
+        "DESCRIPTION": "Fullstack engineer with <strong>8+ years of experience</strong> building financial platforms, security systems, e-commerce and compliance solutions — from Montreal to the world.",
+        "VIEW_WORK": "View My Work",
+        "COLLABORATE": "Let's Collaborate",
+        "STAT_PROJECTS": "Projects",
+        "STAT_CLIENTS": "Clients",
+        "STAT_YEARS": "Years Exp.",
+        "LOCATION": "Montreal, Canada"
+    },
+    "CLIENTS": {
+        "TRUSTED_BY": "Trusted by teams at"
+    },
+    "ABOUT": {
+        "SECTION_LABEL": "About",
+        "SECTION_TITLE": "The engineer behind the code.",
+        "SECTION_1": "I'm a fullstack software engineer with an international career that's spanned Canada, Saudi Arabia, USA, and beyond. I bring the same rigor to a banking transaction system as I do to a physical security platform.",
+        "SECTION_2": "My work sits at the intersection of clean architecture, real-world performance, and user-facing polish — whether that's a multi-tenant e-commerce platform, an AML integration, or a POS system under load.",
+        "SECTION_3": "When I'm not building, I'm creating content on YouTube and contributing to open-source — sharing what I've learned with the wider dev community.",
+        "SKILLS_LABEL": "Core Skills",
+        "SKILL_FRONTEND": "Frontend Dev",
+        "SKILL_BACKEND": "Backend Dev",
+        "SKILL_DATABASE": "Database Design",
+        "SKILL_CLOUD": "Cloud Infra",
+        "SKILL_SECURITY": "Security Systems",
+        "SKILL_FINTECH": "FinTech / AML",
+        "SKILL_WRITING": "Tech Writing",
+        "SKILL_MENTORING": "Mentoring",
+        "TITLE": "I'm a fullstack engineer with 8+ years of experience.",
+        "PROJECTS": "Projects Completed",
+        "CLIENTS": "Happy Clients",
+        "SKILLS": "My Skills",
+        "INTEREST": "Interested in working with me?",
+        "TESTIMONIALS": "Testimonials"
+    },
+    "PROJECTS": {
+        "SECTION_LABEL": "Selected Work",
+        "SECTION_TITLE": "Things I've shipped.",
+        "P1_TITLE": "Digital Banking Platform",
+        "P1_DESC": "Digital transformation of one of the largest mobile payment systems in Saudi Arabia. Led frontend integration for compliance & AML modules under tight regulatory timelines.",
+        "P2_TITLE": "Physical Security Platform",
+        "P2_DESC": "Developed security intelligence solutions for enterprise-grade physical security infrastructure. Built scalable frontend components for real-time surveillance and access control.",
+        "P3_TITLE": "Multi-Tenant E-Commerce Platform",
+        "P3_DESC": "Architected a scalable multi-tenant e-commerce solution supporting independent storefronts with shared infrastructure, custom domains, and isolated data layers.",
+        "P4_TITLE": "Medical Compliance Portal",
+        "P4_DESC": "Built an insurance sales and continuing medical education portal with complex certification tracking workflows and third-party healthcare system integrations.",
+        "P5_TITLE": "Intuitive POS System",
+        "P5_DESC": "Designed and built a high-performance point-of-sale system handling real-time inventory sync, multi-location management, and offline-first reliability.",
+        "P6_TITLE": "Developer YouTube Channel",
+        "P6_DESC": "Creating technical content for the developer community — tutorials, deep-dives, and career insights spanning Angular, fullstack architecture, and software engineering principles.",
+        "VIEW_CLIENT": "View Client",
+        "WATCH_CHANNEL": "Watch Channel",
+        "PRIVATE_PROJECT": "Private Project"
+    },
+    "TESTIMONIALS": {
+        "SECTION_LABEL": "Social Proof",
+        "SECTION_TITLE": "What colleagues say.",
+        "T1_TEXT": "One of the most impressive qualities of Alain is their strong problem-solving abilities. A keen eye for detail and a systematic approach to identifying and resolving issues — their thoroughness significantly enhanced our digital banking testing processes.",
+        "T1_NAME": "Nasser Dahash",
+        "T1_ROLE": "QA Lead · ISTQB Certified",
+        "T2_TEXT": "Alain played a vital role in STC Pay's digital transformation, showcasing strong work ethic and unwavering commitment. His dedication, trustworthiness, and technical prowess made him an invaluable asset. I'd highly recommend him for any demanding development project.",
+        "T2_NAME": "Murthy Kanuri",
+        "T2_ROLE": "Programme Test Manager",
+        "T3_TEXT": "Alain excels in software development with strong technical skills, adaptability, and a deep understanding of principles. His teamwork, mentorship, and reliability make him a valuable asset — highly recommended for software engineer or team lead roles.",
+        "T3_NAME": "Ismail Anjrini",
+        "T3_ROLE": "Software Architect · FinTech"
+    },
+    "CTA": {
+        "LABEL": "Let's Talk",
+        "TITLE": "Got a project in mind",
+        "SUBTITLE": "Whether you need a senior engineer to lead development or a technical co-founder to ship fast — let's see if we're a fit.",
+        "BUTTON": "Start the Conversation →"
+    },
+    "FOOTER": {
+        "COPYRIGHT": "© 2026 Alain Ghawi — All rights reserved"
+    },
     "HERO_CONTENT": {
         "SUBTITLE": "My name is Alain Ghawi",
         "HEADLINE": "And i'm a sofware engineer & digital content creator",
@@ -6,6 +92,7 @@
     },
     "CONTACT": {
         "LABEL": "Get in touch",
+        "TITLE": "Let's work together.",
         "TEXT": "I would love to hear from you if you have new opportunities!",
         "FULL_NAME": "Full Name",
         "EMAIL": "Email",
@@ -34,24 +121,13 @@
         "SERVICE_6": "Training",
         "SERVICE_6_DESCRIPTION": "Training teams on modern development practices, including Agile methodologies, cloud technologies, & .NET"
     },
-    "ABOUT": {
-        "TITLE": "I'm a fullstack engineer with 8+ years of experience.",
-        "SECTION_1": "🚀 As a dynamic software engineer, I've taken a global journey from my Lebanese roots to working for companies in Canada, KSA, USA and Lebanon.",
-        "SECTION_2": "💻 My passion for technology knows no bounds, and my journey is marked by creating physical security solutions, financial apps, compliance & AML integrations, intuitive POS systems, multitenant e-commerce platforms, and insurance sales portal while ensuring every project complies with the highest standards.",
-        "SECTION_3": "🌟 My mission is to turn complex challenges into elegant solutions that solve real-world scenarios. I'm dedicated to deliver excellence in every project, pushing the boundaries of what's possible in software engineering.",
-        "SECTION_4": "🌎 With a global perspective and a wealth of experience, I'm eager to embark on new opportunities to continue making a meaningful impact. Let's join forces and create something extraordinary! 🔥💼💡",
-        "PROJECTS": "Projects Completed",
-        "CLIENTS": "Happy Clients",
-        "SKILLS": "My Skills",
-        "INTEREST": "Interested in working with me?",
-        "TESTIMONIALS": "Testimonials"
-    },
     "CV": {
         "TITLE": "My CV"
     },
     "PORTFOLIO": {
         "GITHUB": {
             "TITLE": "Open Source Projects",
+            "SECTION_TITLE": "Code I ship in public.",
             "VIEW_REPO": "View Repository",
             "LOADING": "Loading repositories...",
             "ERROR": "Failed to Load Repositories",

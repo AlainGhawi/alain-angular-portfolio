@@ -1,4 +1,90 @@
 {
+    "NAV": {
+        "ABOUT": "À Propos",
+        "WORK": "Travaux",
+        "PROJECTS": "Projets",
+        "REVIEWS": "Avis",
+        "GET_IN_TOUCH": "Me Contacter"
+    },
+    "HERO": {
+        "EYEBROW": "Disponible pour de nouveaux projets",
+        "FIRST_NAME": "Alain",
+        "LAST_NAME": "Ghawi",
+        "ROLE": "Ingénieur Logiciel",
+        "DESCRIPTION": "Ingénieur fullstack avec <strong>8+ ans d'expérience</strong> dans la création de plateformes financières, systèmes de sécurité, e-commerce et solutions de conformité — de Montréal au monde entier.",
+        "VIEW_WORK": "Voir Mes Travaux",
+        "COLLABORATE": "Collaborons",
+        "STAT_PROJECTS": "Projets",
+        "STAT_CLIENTS": "Clients",
+        "STAT_YEARS": "Ans d'Exp.",
+        "LOCATION": "Montréal, Canada"
+    },
+    "CLIENTS": {
+        "TRUSTED_BY": "Fait confiance par des équipes chez"
+    },
+    "ABOUT": {
+        "SECTION_LABEL": "À Propos",
+        "SECTION_TITLE": "L'ingénieur derrière le code.",
+        "SECTION_1": "Je suis un ingénieur logiciel fullstack avec une carrière internationale qui s'est étendue au Canada, en Arabie saoudite, aux États-Unis et au-delà. J'apporte la même rigueur à un système de transaction bancaire qu'à une plateforme de sécurité physique.",
+        "SECTION_2": "Mon travail se situe à l'intersection d'une architecture propre, de performances réelles et d'un polish côté utilisateur — qu'il s'agisse d'une plateforme e-commerce multi-tenant, d'une intégration AML ou d'un système de point de vente sous charge.",
+        "SECTION_3": "Quand je ne construis pas, je crée du contenu sur YouTube et contribue à l'open-source — partageant ce que j'ai appris avec la communauté des développeurs.",
+        "SKILLS_LABEL": "Compétences Clés",
+        "SKILL_FRONTEND": "Dév. Frontend",
+        "SKILL_BACKEND": "Dév. Backend",
+        "SKILL_DATABASE": "Conception BDD",
+        "SKILL_CLOUD": "Infra Cloud",
+        "SKILL_SECURITY": "Systèmes de Sécurité",
+        "SKILL_FINTECH": "FinTech / AML",
+        "SKILL_WRITING": "Rédaction Tech.",
+        "SKILL_MENTORING": "Mentorat",
+        "TITLE": "Je suis un ingénieur full-stack avec plus de 8 ans d'expérience.",
+        "PROJECTS": "Projets Terminés",
+        "CLIENTS": "Clients Satisfaits",
+        "SKILLS": "Mes Compétences",
+        "INTEREST": "Intéressé(e) à travailler avec moi ?",
+        "TESTIMONIALS": "Témoignages"
+    },
+    "PROJECTS": {
+        "SECTION_LABEL": "Travaux Sélectionnés",
+        "SECTION_TITLE": "Ce que j'ai livré.",
+        "P1_TITLE": "Plateforme Bancaire Digitale",
+        "P1_DESC": "Transformation digitale de l'un des plus grands systèmes de paiement mobile en Arabie saoudite. Direction de l'intégration frontend pour les modules de conformité et AML sous des délais réglementaires serrés.",
+        "P2_TITLE": "Plateforme de Sécurité Physique",
+        "P2_DESC": "Développement de solutions d'intelligence sécuritaire pour une infrastructure de sécurité physique de niveau entreprise. Construction de composants frontend évolutifs pour la surveillance en temps réel et le contrôle d'accès.",
+        "P3_TITLE": "Plateforme E-Commerce Multi-Tenant",
+        "P3_DESC": "Architecture d'une solution e-commerce multi-tenant évolutive supportant des vitrines indépendantes avec une infrastructure partagée, des domaines personnalisés et des couches de données isolées.",
+        "P4_TITLE": "Portail de Conformité Médicale",
+        "P4_DESC": "Construction d'un portail de vente d'assurance et de formation médicale continue avec des workflows complexes de suivi des certifications et des intégrations de systèmes de santé tiers.",
+        "P5_TITLE": "CME - Système de Point de Vente Intuitif",
+        "P5_DESC": "Conception et construction d'un système de point de vente haute performance gérant la synchronisation des stocks en temps réel, la gestion multi-sites et la fiabilité offline-first.",
+        "P6_TITLE": "Chaîne YouTube pour Développeurs",
+        "P6_DESC": "Création de contenu technique pour la communauté des développeurs — tutoriels, analyses approfondies et conseils de carrière couvrant Angular, l'architecture fullstack et les principes d'ingénierie logicielle.",
+        "VIEW_CLIENT": "Voir le Client",
+        "WATCH_CHANNEL": "Voir la Chaîne",
+        "PRIVATE_PROJECT": "Projet Privé"
+    },
+    "TESTIMONIALS": {
+        "SECTION_LABEL": "Preuve Sociale",
+        "SECTION_TITLE": "Ce que disent mes collègues.",
+        "T1_TEXT": "L'une des qualités les plus impressionnantes d'Alain est sa forte capacité de résolution de problèmes. Un sens aigu du détail et une approche systématique pour identifier et résoudre les problèmes — sa rigueur a considérablement amélioré nos processus de test bancaire digital.",
+        "T1_NAME": "Nasser Dahash",
+        "T1_ROLE": "Chef QA · Certifié ISTQB",
+        "T2_TEXT": "Alain a joué un rôle vital dans la transformation digitale de STC Pay, faisant preuve d'une forte éthique de travail et d'un engagement sans faille. Sa dévotion, sa fiabilité et ses prouesses techniques en ont fait un atout inestimable. Je le recommande vivement pour tout projet de développement exigeant.",
+        "T2_NAME": "Murthy Kanuri",
+        "T2_ROLE": "Directeur de Tests de Programme",
+        "T3_TEXT": "Alain excelle dans le développement logiciel avec de solides compétences techniques, une grande adaptabilité et une compréhension profonde des principes. Son esprit d'équipe, son mentorat et sa fiabilité en font un atout précieux — hautement recommandé pour des rôles d'ingénieur logiciel ou de chef d'équipe.",
+        "T3_NAME": "Ismail Anjrini",
+        "T3_ROLE": "Architecte Logiciel · FinTech"
+    },
+    "CTA": {
+        "LABEL": "Parlons",
+        "TITLE": "Vous avez un projet en tête",
+        "SUBTITLE": "Que vous ayez besoin d'un ingénieur senior pour diriger le développement ou d'un co-fondateur technique pour livrer rapidement — voyons si nous sommes compatibles.",
+        "BUTTON": "Commencer la Conversation →"
+    },
+    "FOOTER": {
+        "COPYRIGHT": "© 2026 Alain Ghawi — Tous droits réservés"
+    },
     "HERO_CONTENT": {
         "SUBTITLE": "Mon nom est Alain Ghawi",
         "HEADLINE": "Et je suis un ingénieur logiciel & un créateur de contenu ",
@@ -6,6 +92,7 @@
     },
     "CONTACT": {
         "LABEL": "Prends contact",
+        "TITLE": "Travaillons ensemble.",
         "TEXT": "J'aimerais avoir de vos nouvelles si vous avez des opportunités!",
         "FULL_NAME": "Nom Complet",
         "EMAIL": "Courriel",
@@ -34,24 +121,13 @@
         "SERVICE_6": "Formation",
         "SERVICE_6_DESCRIPTION": "Formation des équipes aux pratiques modernes de développement, incluant les méthodologies Agile, les technologies cloud et .NET."
     },
-    "ABOUT": {
-        "TITLE": "Je suis un ingénieur full-stack avec plus de 8 ans d'expérience.",
-        "SECTION_1": "🚀 En tant qu'ingénieur logiciel dynamique, j'ai entrepris un voyage mondial depuis mes racines libanaises en travaillant pour des entreprises au Canada, en Arabie saoudite, aux États-Unis et au Liban.",
-        "SECTION_2": "💻 Ma passion pour la technologie est sans limite, et mon parcours est marqué par la création de solutions de sécurité physique, d'applications financières, d'intégrations de conformité et AML, de systèmes de point de vente intuitifs, de plateformes e-commerce multi-locataires, et de portails de vente d'assurance, tout en veillant à ce que chaque projet soit conforme aux normes les plus élevées.",
-        "SECTION_3": "🌟 Ma mission consiste à transformer des défis complexes en solutions élégantes qui résolvent des scénarios du monde réel. Je m'engage à fournir l'excellence dans chaque projet, repoussant les limites de ce qui est possible en ingénierie logicielle.",
-        "SECTION_4": "🌎 Avec une perspective mondiale et une grande expérience, je suis impatient de saisir de nouvelles opportunités pour continuer à avoir un impact significatif. Unissons nos forces et créons quelque chose d'extraordinaire ! 🔥💼💡",
-        "PROJECTS": "Projets Terminés",
-        "CLIENTS": "Clients Satisfaits",
-        "SKILLS": "Mes Compétences",
-        "INTEREST": "Intéressé(e) à travailler avec moi ?",
-        "TESTIMONIALS": "Témoignages"
-    },
     "CV": {
         "TITLE": "Mon CV"
     },
     "PORTFOLIO": {
         "GITHUB": {
             "TITLE": "Projets Open Source",
+            "SECTION_TITLE": "Du code que je livre en public.",
             "VIEW_REPO": "Voir le Dépôt",
             "LOADING": "Chargement des dépôts...",
             "ERROR": "Échec du Chargement des Dépôts",

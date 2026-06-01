@@ -7,18 +7,6 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://alainghawi.github.io/alain-angular-portfolio/portfolio</loc>
-    <lastmod>2026-05-29</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://alainghawi.github.io/alain-angular-portfolio/services</loc>
-    <lastmod>2026-05-29</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://alainghawi.github.io/alain-angular-portfolio/cv</loc>
     <lastmod>2026-05-29</lastmod>
     <changefreq>monthly</changefreq>

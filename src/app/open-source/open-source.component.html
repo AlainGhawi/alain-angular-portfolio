@@ -1,0 +1,41 @@
+<section id="open-source">
+  <div class="container">
+
+    <div appReveal>
+      <p class="section-label">{{ 'PORTFOLIO.GITHUB.TITLE' | translate }}</p>
+      <h2 class="section-title">{{ 'PORTFOLIO.GITHUB.SECTION_TITLE' | translate }}</h2>
+    </div>
+
+    <div *ngIf="isLoading" class="os-state">
+      <p class="os-state-text">{{ 'PORTFOLIO.GITHUB.LOADING' | translate }}</p>
+    </div>
+
+    <div *ngIf="hasError && !isLoading" class="os-state">
+      <p class="os-state-text os-state-error">{{ 'PORTFOLIO.GITHUB.ERROR' | translate }}</p>
+    </div>
+
+    <div *ngIf="!isLoading && !hasError && githubRepos.length === 0" class="os-state">
+      <p class="os-state-text">{{ 'PORTFOLIO.GITHUB.NO_REPOS' | translate }}</p>
+    </div>
+
+    <div class="os-grid" *ngIf="!isLoading && !hasError && githubRepos.length > 0">
+      <div class="os-card" *ngFor="let repo of githubRepos; let i = index" [appReveal]="getRevealDelay(i)">
+        <div class="os-card-header">
+          <span class="repo-name">{{ repo.name }}</span>
+          <span class="lang-badge">{{ repo.language }}</span>
+        </div>
+        <p class="repo-desc">{{ repo.description }}</p>
+        <div class="os-card-footer">
+          <div class="repo-stats">
+            <span class="stat">⭐ {{ repo.stars }}</span>
+            <span class="stat">⑂ {{ repo.forks }}</span>
+          </div>
+          <a [href]="repo.url" target="_blank" rel="noopener" class="repo-link">
+            {{ 'PORTFOLIO.GITHUB.VIEW_REPO' | translate }} →
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>

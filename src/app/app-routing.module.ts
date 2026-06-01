@@ -1,21 +1,17 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
-import { ServiceComponent } from './service/service.component';
 import { ContactComponent } from './contact/contact.component';
-import { PortfolioComponent } from './portfolio/portfolio.component';
 import { CvComponent } from './cv/cv.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: '', component: HomeComponent },
   { path: 'contact', component: ContactComponent },
-  { path: 'services', component: ServiceComponent },
-  { path: 'portfolio', component: PortfolioComponent },
   { path: 'cv', component: CvComponent },
 ];
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, { anchorScrolling: 'enabled', scrollPositionRestoration: 'top', scrollOffset: [0, 80] })],
   exports: [RouterModule],
 })
 export class AppRoutingModule { }

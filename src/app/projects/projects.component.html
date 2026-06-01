@@ -1,0 +1,33 @@
+<section id="projects">
+  <div class="container">
+    <div class="section-label" appReveal>{{ 'PROJECTS.SECTION_LABEL' | translate }}</div>
+    <h2 class="section-title" appReveal="delay-1">{{ 'PROJECTS.SECTION_TITLE' | translate }}</h2>
+
+    <div class="projects-grid">
+      <div class="project-card" *ngFor="let project of projects; let i = index" [appReveal]="getRevealDelay(i)">
+
+        <div class="project-thumb" [style.background]="project.gradient">
+          {{ project.emoji }}
+          <div class="project-num">{{ project.num }}</div>
+        </div>
+
+        <div class="project-body">
+          <div class="project-tags">
+            <span class="project-tag" *ngFor="let tag of project.tags">{{ tag }}</span>
+          </div>
+          <div class="project-title">{{ project.titleKey | translate }}</div>
+          <div class="project-desc">{{ project.descKey | translate }}</div>
+          <div class="project-footer">
+            <a *ngIf="project.link" [href]="project.link" class="project-link" target="_blank" rel="noopener">
+              {{ project.linkLabelKey | translate }}
+            </a>
+            <span *ngIf="!project.link" class="project-link private">
+              {{ project.linkLabelKey | translate }}
+            </span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
