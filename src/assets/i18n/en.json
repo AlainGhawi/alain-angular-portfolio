@@ -124,6 +124,11 @@
     "CV": {
         "TITLE": "My CV"
     },
+    "NOT_FOUND": {
+        "TITLE": "Page Not Found",
+        "DESC": "The page you're looking for doesn't exist or has been moved.",
+        "BACK": "← Back to Home"
+    },
     "PORTFOLIO": {
         "GITHUB": {
             "TITLE": "Open Source Projects",

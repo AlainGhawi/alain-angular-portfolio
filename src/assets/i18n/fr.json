@@ -124,6 +124,11 @@
     "CV": {
         "TITLE": "Mon CV"
     },
+    "NOT_FOUND": {
+        "TITLE": "Page Introuvable",
+        "DESC": "La page que vous recherchez n'existe pas ou a été déplacée.",
+        "BACK": "← Retour à l'Accueil"
+    },
     "PORTFOLIO": {
         "GITHUB": {
             "TITLE": "Projets Open Source",

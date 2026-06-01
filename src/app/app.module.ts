@@ -24,6 +24,7 @@ import { ProjectsComponent } from './projects/projects.component';
 import { OpenSourceComponent } from './open-source/open-source.component';
 import { TestimonialsComponent } from './testimonials/testimonials.component';
 import { CtaComponent } from './cta/cta.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 @NgModule({
     declarations: [
@@ -44,6 +45,7 @@ import { CtaComponent } from './cta/cta.component';
         OpenSourceComponent,
         TestimonialsComponent,
         CtaComponent,
+        NotFoundComponent,
     ],
     bootstrap: [AppComponent],
     imports: [
