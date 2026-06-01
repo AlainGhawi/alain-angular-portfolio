@@ -204,10 +204,14 @@ nav.scrolled {
   background: rgba(0, 0, 0, 0.5);
   z-index: 98;
   opacity: 0;
+  pointer-events: none;
   transition: opacity 0.35s;
 }
 
-.drawer-backdrop.open { opacity: 1; }
+.drawer-backdrop.open {
+  opacity: 1;
+  pointer-events: auto;
+}
 
 @media (max-width: 900px) {
   .nav-links { display: none; }
