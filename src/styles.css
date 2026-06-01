@@ -157,6 +157,13 @@ section { padding: 100px 0; position: relative; z-index: 1; }
 }
 .btn-primary:hover { background: var(--amber2); transform: translateY(-2px); }
 
+/* ── Disable custom cursor on touch devices ── */
+@media (pointer: coarse) {
+  body { cursor: auto !important; }
+  .cursor, .cursor-ring { display: none !important; }
+  .btn-primary { cursor: pointer; }
+}
+
 .btn-ghost {
   display: inline-flex;
   align-items: center;
