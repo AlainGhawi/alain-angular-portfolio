@@ -25,6 +25,10 @@ export class HeroComponent {
     });
   }
 
+  scrollTo(id: string) {
+    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+
   private animateValue(
     end: number,
     setter: (value: number) => void,

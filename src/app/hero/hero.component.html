@@ -17,8 +17,8 @@
         <p class="hero-desc" [innerHTML]="'HERO.DESCRIPTION' | translate"></p>
 
         <div class="hero-actions">
-          <a [routerLink]="['/home']" fragment="projects" class="btn-primary">{{ 'HERO.VIEW_WORK' | translate }}</a>
-          <a [routerLink]="['/home']" fragment="cta" class="btn-ghost">{{ 'HERO.COLLABORATE' | translate }}</a>
+          <a href="javascript:void(0)" (click)="scrollTo('projects')" class="btn-primary">{{ 'HERO.VIEW_WORK' | translate }}</a>
+          <a href="javascript:void(0)" (click)="scrollTo('cta')" class="btn-ghost">{{ 'HERO.COLLABORATE' | translate }}</a>
         </div>
 
         <div class="hero-stats">
